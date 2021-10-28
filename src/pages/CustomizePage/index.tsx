@@ -9,7 +9,7 @@ interface CustomizePageProps {
 }
 
 const CustomizePage: React.FC<CustomizePageProps> = ({adicionais, handleAdicional}) => {
-    const [click, setClick] = useState(0);
+    const [click, setClick] = useState(9);
     const valor = "destaque";
     const valor2 = "";
     const history = useHistory();
@@ -44,7 +44,7 @@ const CustomizePage: React.FC<CustomizePageProps> = ({adicionais, handleAdiciona
                         )
                     }
                 </div>
-                <div onClick={() => click !== 0 ? openUrl(`/sistema-acai/resumo`): console.log("Precisa selecionar uma opção de sabor/tamanho")}>
+                <div onClick={() => click !== 9 ? openUrl(`/sistema-acai/resumo`): console.log("Precisa selecionar uma opção de sabor/tamanho")}>
                     <Button text="Finalizar pedido" />
                 </div>
             </div>
