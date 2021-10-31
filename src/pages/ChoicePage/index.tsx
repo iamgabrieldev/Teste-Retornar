@@ -15,12 +15,9 @@ interface ChoicePageProps {
 const ChoicePage: React.FC<ChoicePageProps> = ({sabores, tamanhos, handleSabor, handleTamanho}) => {
     const [click, setClick] = useState(9);
     const [click2, setClick2] = useState(9);
-    // const [selectedSabor, setSelectedSabor] = useState();
-    // const [selectedTamanho, setSelectedTamanho] = useState();
     const valor = "destaque";
     const valor2 = "";
     const history = useHistory();
-    // console.log(valor?.replace(/"([^"]+(?="))"/g, "$1"))
     const openUrl = useCallback(
         (path: string) => {
           history.push(path);
@@ -28,11 +25,9 @@ const ChoicePage: React.FC<ChoicePageProps> = ({sabores, tamanhos, handleSabor, 
         [history],
     );
     const selectSabor = (sabor:any) => {
-        // setSelectedSabor(sabor);
         handleSabor(sabor)
     }
     const selectTamanho = (tamanho:any) => {
-        // setSelectedTamanho(tamanho);
         handleTamanho(tamanho);
     }
 

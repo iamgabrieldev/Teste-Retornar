@@ -8,17 +8,17 @@ const sabores = [
   {
     nome: "Morango",
     tempo: 0,
-    preco: 0
+    preco: 0,
   },
   {
     nome: "Banana",
     tempo: 0,
-    preco: 0
+    preco: 0,
   },
   {
     nome: "Kiwi",
-    time: 0,
-    preco: 0
+    tempo: 0,
+    preco: 0,
   },
 ]
 
@@ -44,17 +44,17 @@ const adicionais = [
   {
     nome: "Granola",
     tempo: 0,
-    preco: 3
+    preco: 3,
   },
   {
     nome: "Paçoca",
     tempo: 0,
-    preco: 3
+    preco: 3,
   },
   {
     nome: "Leite Ninho",
     tempo: 0,
-    preco: 3
+    preco: 3,
   },
 ]
 

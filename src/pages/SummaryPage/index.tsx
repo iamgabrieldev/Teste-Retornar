@@ -37,7 +37,7 @@ const SummaryPage: React.FC<SummaryPageProps> = ({sabor, tamanho, adicional}) =>
                     <p>R${parseFloat(adicional.preco).toFixed(2)}</p>
                 </div>
                 <h3 style={{color: '#46295A', fontSize: '16px'}}><strong>Valor total:</strong>{(tamanho.preco + sabor.preco + adicional.preco).toFixed(2)}</h3>
-                <h3 style={{color: '#46295A', fontSize: '16px'}}><strong>Tempo de Preparo:</strong>{parseFloat((tamanho.tempo + sabor.tempo + adicional.tempo)).toFixed(2)}</h3>
+                <h3 style={{color: '#46295A', fontSize: '16px'}}><strong>Tempo de Preparo:</strong>{(tamanho.tempo + sabor.tempo + adicional.tempo)}</h3>
                 <div onClick={() => openUrl(`/sistema-acai/escolha`)}>
                     <Button text="Refazer pedido" />
                 </div>
