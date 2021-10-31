@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom';
-import ChoicePage from './pages/ChoicePage/index';
-import CustomizePage from './pages/CustomizePage/index';
-import SummaryPage from './pages/SummaryPage/index';
+import React, { useState } from "react";
+import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
+import ChoicePage from "./pages/ChoicePage/index";
+import CustomizePage from "./pages/CustomizePage/index";
+import SummaryPage from "./pages/SummaryPage/index";
 
 const sabores = [
   {
@@ -20,7 +20,7 @@ const sabores = [
     tempo: 0,
     preco: 0,
   },
-]
+];
 
 const tamanhos = [
   {
@@ -31,14 +31,14 @@ const tamanhos = [
   {
     nome: "Médio (500ml)",
     tempo: 7,
-    preco: 12
+    preco: 12,
   },
   {
     nome: "Grande (700ml)",
     tempo: 9,
     preco: 15,
   },
-]
+];
 
 const adicionais = [
   {
@@ -56,30 +56,28 @@ const adicionais = [
     tempo: 0,
     preco: 3,
   },
-]
+];
 
 const App: React.FC = () => {
-  
   const [sabor, setSabor] = useState("");
   const [tamanho, setTamanho] = useState("");
   const [adicional, setAdicional] = useState("");
 
-  function handleSabor(sabor:any) {
+  function handleSabor(sabor: any) {
     setSabor(sabor);
   }
-  function handleTamanho(tamanho:any) {
+  function handleTamanho(tamanho: any) {
     setTamanho(tamanho);
   }
-  function handleAdicional(adicional:any) {
+  function handleAdicional(adicional: any) {
     setAdicional(adicional);
   }
-
 
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/sistema-acai/escolha">
-          <ChoicePage 
+          <ChoicePage
             sabores={sabores}
             tamanhos={tamanhos}
             handleSabor={handleSabor}
@@ -87,17 +85,13 @@ const App: React.FC = () => {
           />
         </Route>
         <Route path="/sistema-acai/personalização">
-          <CustomizePage 
+          <CustomizePage
             adicionais={adicionais}
             handleAdicional={handleAdicional}
           />
         </Route>
         <Route path="/sistema-acai/resumo">
-          <SummaryPage 
-            sabor={sabor}
-            tamanho={tamanho}
-            adicional={adicional}
-          />
+          <SummaryPage sabor={sabor} tamanho={tamanho} adicional={adicional} />
         </Route>
         <Route exact path="*">
           <Redirect to="/sistema-acai/escolha" />
@@ -105,6 +99,6 @@ const App: React.FC = () => {
       </Switch>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
