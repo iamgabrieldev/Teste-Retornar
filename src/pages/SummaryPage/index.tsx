@@ -27,8 +27,8 @@ const SummaryPage: React.FC<SummaryPageProps> = ({
         style={{
           backgroundColor: "#fff",
           width: "30vw",
-          height: "60vh",
-          margin: "25vh auto",
+          height: "84vh",
+          margin: "2vh auto",
           borderRadius: "8px",
           padding: "32px 64px",
         }}

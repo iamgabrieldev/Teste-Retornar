@@ -42,8 +42,8 @@ const ChoicePage: React.FC<ChoicePageProps> = ({
         style={{
           backgroundColor: "#fff",
           width: "30vw",
-          height: "38vh",
-          margin: "25vh auto",
+          height: "70vh",
+          margin: "10vh auto",
           borderRadius: "8px",
           padding: "32px 64px",
         }}
